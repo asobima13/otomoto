@@ -23,6 +23,7 @@
 .header-img .wrapper {
   width: 100%;
   max-width: 1110px;
+  margin: 0 80px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -109,6 +110,7 @@
 .agen .wrapper {
   padding: 40px 0;
   max-width: 1110px;
+  margin: 0 80px;
   width: 100%;
   display: flex;
   justify-content: space-between;

@@ -1,7 +1,8 @@
 import './Header.css'
 import { Link } from 'react-router-dom'
+import Contact from '../contact/Contact'
 
-const Header = () => {
+const Header = (props) => {
 
     const pages = [
         {
@@ -27,21 +28,29 @@ const Header = () => {
     ]
 
     return (
-        <div className="Header">
+        <div className={"Header" + (props.isView & (props.path === '/') ? " transparent" : "")}>
             <div className="wrapper">
-                <div className="logo">
-                    <Link to="/">
-                        <img src="assets/otomoto-light.png" alt="" />
-                        {/* <img src="assets/otomoto-dark.png" alt="" /> */}
-                    </Link>
-                </div>
+                {/* <div className="logo">
+                </div> */}
                 <div className="router">
                     <ul>
+                        <li>
+                            <Link to="/">
+                                {
+                                    props.isView & (props.path === '/')
+                                    ? <img src="assets/otomoto-light.png" alt="" />
+                                    : <img src="assets/otomoto-dark.png" alt="" />
+                                }
+                            </Link>
+                        </li>
                         {
-                            pages.map((page, idx) => <li key={idx}><Link to={page.route} className={page.name}>{page.name}</Link></li>)
+                            pages.map((page, idx) => <li key={idx}><Link to={page.route}>{page.name}</Link></li>)
                         }
                     </ul>
                 </div>
+                {
+                    (props.path !== '/') && (<div className="contact"><Contact /></div>)
+                }
             </div>
         </div>
     )
