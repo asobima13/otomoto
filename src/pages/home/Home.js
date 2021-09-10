@@ -2,7 +2,8 @@ import './Home.css'
 import Footer from '../../components/footer/Footer'
 import { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
-import { useLocation } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
+import Offer from '../../components/offer/Offer'
 
 const Home = ({setIsView, setPath}) => {
 
@@ -10,7 +11,7 @@ const Home = ({setIsView, setPath}) => {
     const [stateBandung,  setStateBandung] = useState(0)
     const [stateCirebon,  setStateCirebon] = useState(0)
     const {ref, inView} = useInView({threshold: 1})
-    const {ref: ref2, inView: inView2} = useInView({threshold: 1})
+    const {ref: ref2, inView: inView2} = useInView({threshold: .8})
     const { pathname } = useLocation()
 
     useEffect(() => {
@@ -100,14 +101,14 @@ const Home = ({setIsView, setPath}) => {
                     </div>
                 </div>
             </div>
-            <div className="agen">
-                <div className="wrapper">
-                    <p className="sentence">Dapatkan pengasilan tambahan bersama OTOMOTO</p>
-                    <div className="button">
+            <Offer
+                text="Dapatkan pengasilan tambahan bersama OTOMOTO"
+                button={
+                    <Link to="/mitra" className="button">
                         <p>Daftar Agen Moto</p>
-                    </div>
-                </div>
-            </div>
+                    </Link>
+                }
+            />
             <Footer />
         </div>
     )

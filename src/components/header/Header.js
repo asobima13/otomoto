@@ -30,8 +30,6 @@ const Header = (props) => {
     return (
         <div className={"Header" + (props.isView & (props.path === '/') ? " transparent" : "")}>
             <div className="wrapper">
-                {/* <div className="logo">
-                </div> */}
                 <div className="router">
                     <ul>
                         <li>

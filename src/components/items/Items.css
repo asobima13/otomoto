@@ -1,0 +1,39 @@
+.Items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Items .motor {
+  border: 1px solid lightgrey;
+  flex: 15%;
+  margin: 0 0 20px 20px;
+  cursor: pointer;
+}
+
+.Items .motor .img {
+  padding: 0 auto;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Items .motor .img img {
+  height: 100%;
+  /* margin: 0 auto; */
+}
+
+.Items .motor .txt .title {
+  text-transform: uppercase;
+}
+
+.Items .motor .txt {
+  padding: 10px;
+}
+
+.Items .motor .txt p {
+  margin: 0;
+}

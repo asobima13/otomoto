@@ -1,0 +1,41 @@
+.Offer {
+  background: linear-gradient(to right, #83e8eb 0, #569dbc);
+  width: 100%;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Offer .wrapper {
+  padding: 40px 0;
+  max-width: 1110px;
+  margin: 0 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Offer .wrapper .sentence {
+  color: #1e3459;
+  font-size: 26px;
+}
+
+.Offer .wrapper .button {
+  background-color: #1e3459;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+
+.Offer .wrapper .button:hover {
+  color: #6ee0e0;
+}
+
+.Offer .wrapper .button p {
+  font-size: 20px;
+  margin: 20px 30px;
+}

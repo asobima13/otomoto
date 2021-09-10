@@ -1,3 +1,70 @@
 .Jubelmoto {
+  left: 0;
+  width: 100%;
   top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 14px;
+  font-weight: 500 !important;
+}
+
+.Jubelmoto .wrapper {
+  width: calc(100% - 160px);
+  max-width: 1110px;
+}
+
+.Jubelmoto .urutkan {
+  text-align: right;
+}
+
+.Jubelmoto input[type="text"],
+.Jubelmoto select {
+  height: 30px;
+  font-size: 14px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: 0.5px solid lightgrey;
+  border-radius: 5px;
+}
+
+.Jubelmoto input:focus,
+.Jubelmoto select:focus {
+  border: 0.5px solid lightblue;
+}
+
+.Jubelmoto .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.Jubelmoto .pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+}
+
+.Jubelmoto .pagination li {
+  width: 30px;
+  height: 30px;
+  border: 0.5px ridge lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1e3559;
+  cursor: pointer;
+}
+
+.Jubelmoto .pagination li:first-child {
+  cursor: default;
+}
+
+.Jubelmoto .pagination li:nth-child(2) {
+  background-color: #1e3559;
+  color: #fff;
 }

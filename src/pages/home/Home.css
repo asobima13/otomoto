@@ -1,5 +1,6 @@
 .Home {
   top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -96,45 +97,4 @@
 
 .bengkel .bottom .item p.lokasi {
   font-size: 16px;
-}
-
-.agen {
-  background: linear-gradient(to right, #83e8eb 0, #569dbc);
-  width: 100%;
-  font-weight: 400;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.agen .wrapper {
-  padding: 40px 0;
-  max-width: 1110px;
-  margin: 0 80px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.agen .wrapper .sentence {
-  color: #1e3459;
-  font-size: 26px;
-}
-
-.agen .wrapper .button {
-  background-color: #1e3459;
-  text-align: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.agen .wrapper .button p {
-  color: #fff;
-  font-size: 20px;
-  margin: 20px 30px;
-}
-
-.agen .wrapper .button p:hover {
-  color: #6ee0e0;
 }
