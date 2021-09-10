@@ -30,25 +30,43 @@ const Header = (props) => {
     return (
         <div className={"Header" + (props.isView & (props.path === '/') ? " transparent" : "")}>
             <div className="wrapper">
-                <div className="router">
-                    <ul>
-                        <li>
-                            <Link to="/">
+                <div className="desktop">
+                    <div className="left">
+                        <div className="router">
+                            <ul>
+                                <li>
+                                    <Link to="/">
+                                        {
+                                            props.isView & (props.path === '/')
+                                            ? <img src="assets/otomoto-light.png" alt="" />
+                                            : <img src="assets/otomoto-dark.png" alt="" />
+                                        }
+                                    </Link>
+                                </li>
                                 {
-                                    props.isView & (props.path === '/')
-                                    ? <img src="assets/otomoto-light.png" alt="" />
-                                    : <img src="assets/otomoto-dark.png" alt="" />
+                                    pages.map((page, idx) => <li key={idx}><Link to={page.route}>{page.name}</Link></li>)
                                 }
-                            </Link>
-                        </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="right">
+                        {
+                            (props.path !== '/') && (<div className="contact"><Contact /></div>)
+                        }
+                        <div className="burger">
+                            <div className="bar"></div>
+                            <div className="bar"></div>
+                            <div className="bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div className="mobile">
+                    <ul>
                         {
                             pages.map((page, idx) => <li key={idx}><Link to={page.route}>{page.name}</Link></li>)
                         }
                     </ul>
                 </div>
-                {
-                    (props.path !== '/') && (<div className="contact"><Contact /></div>)
-                }
             </div>
         </div>
     )
