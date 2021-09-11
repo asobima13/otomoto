@@ -16,3 +16,9 @@
 .Contact p:last-child {
   margin-top: 0;
 }
+
+@media (max-width: 768px) {
+  .Contact {
+    display: none;
+  }
+}

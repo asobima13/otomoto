@@ -31,15 +31,15 @@ const Filter = () => {
                 </div>
                 <div className="toggle-box" style={toggleLokasi ? hideStyle : displayStyle}>
                     <input type="checkbox" id="jaktim" value="jaktim"/>
-                    <label for="jaktim">Jakarta Timur</label><br/>
+                    <label htmlFor="jaktim">Jakarta Timur</label><br/>
                     <input type="checkbox" id="bekasi" value="bekasi"/>
-                    <label for="bekasi">Kota Bekasi</label><br/>
+                    <label htmlFor="bekasi">Kota Bekasi</label><br/>
                     <input type="checkbox" id="jaksel" value="jaksel"/>
-                    <label for="jaksel">Jakarta Selatan</label><br/>
+                    <label htmlFor="jaksel">Jakarta Selatan</label><br/>
                     <input type="checkbox" id="jakbar" value="jakbar"/>
-                    <label for="jakbar">Jakarta Barat</label><br/>
+                    <label htmlFor="jakbar">Jakarta Barat</label><br/>
                     <input type="checkbox" id="tangerang" value="tangerang"/>
-                    <label for="tangerang">Kota Tangerang</label><br/>
+                    <label htmlFor="tangerang">Kota Tangerang</label><br/>
                     <p><strong>Lihat Semua</strong></p>
                 </div>
             </div>

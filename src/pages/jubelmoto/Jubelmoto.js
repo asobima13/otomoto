@@ -1,5 +1,5 @@
 import './Jubelmoto.css'
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom'
 import { ArrowBackIos, ArrowForwardIos } from '@material-ui/icons';
 import Filter from '../../components/filter/Filter';
@@ -10,13 +10,7 @@ import Kiasan from '../../components/kiasan/Kiasan';
 
 const Jubelmoto = ({setPath}) => {
     const { pathname } = useLocation()
-    const [pages, setPages] = useState([])
-
-    useEffect(() => {
-        for (let i = 1; i <= 8; i++) {
-            setPages([...pages, i])
-        }
-    }, [pages, setPages])
+    const pages = [1,2,3,4,5,6,7,8]
 
     useEffect(() => {
         setPath(pathname)

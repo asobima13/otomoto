@@ -10,12 +10,12 @@ const Home = ({setIsView, setPath}) => {
     const [stateJabodetabek,  setStateJabodetabek] = useState(0)
     const [stateBandung,  setStateBandung] = useState(0)
     const [stateCirebon,  setStateCirebon] = useState(0)
-    const {ref, inView} = useInView({threshold: 1})
-    const {ref: ref2, inView: inView2} = useInView({threshold: .8})
+    const {ref, inView} = useInView({threshold: .85})
+    const {ref: ref2, inView: inView2} = useInView({threshold: 1})
     const { pathname } = useLocation()
 
     useEffect(() => {
-        inView ? setIsView(true) : setIsView(false)
+        inView ? setIsView(true) : setIsView(false);
     }, [setIsView, inView])
 
     useEffect(() => {

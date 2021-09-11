@@ -1,6 +1,6 @@
 .Jubelmoto {
   left: 0;
-  width: 100%;
+  width: 100vw;
   top: 80px;
   display: flex;
   flex-direction: column;
@@ -14,6 +14,7 @@
 .Jubelmoto .wrapper {
   width: calc(100% - 160px);
   max-width: 1110px;
+  margin-top: 10px;
 }
 
 .Jubelmoto .urutkan {
@@ -67,4 +68,14 @@
 .Jubelmoto .pagination li:nth-child(2) {
   background-color: #1e3559;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .Jubelmoto .wrapper {
+    width: 100%;
+    margin-right: 20px;
+  }
+  .Filter {
+    display: none;
+  }
 }

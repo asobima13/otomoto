@@ -1,8 +1,11 @@
 import './Header.css'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Contact from '../contact/Contact'
 
 const Header = (props) => {
+
+    const [toggleShow, setToggleShow] = useState(false)
 
     const pages = [
         {
@@ -44,7 +47,7 @@ const Header = (props) => {
                                     </Link>
                                 </li>
                                 {
-                                    pages.map((page, idx) => <li key={idx}><Link to={page.route}>{page.name}</Link></li>)
+                                    pages.map((page, idx) => <li key={idx}><Link className={props.path === page.route ? 'current' : ''} to={page.route}>{page.name}</Link></li>)
                                 }
                             </ul>
                         </div>
@@ -53,17 +56,17 @@ const Header = (props) => {
                         {
                             (props.path !== '/') && (<div className="contact"><Contact /></div>)
                         }
-                        <div className="burger">
+                        <div onClick={() => setToggleShow(!toggleShow)} className="burger">
                             <div className="bar"></div>
                             <div className="bar"></div>
                             <div className="bar"></div>
                         </div>
                     </div>
                 </div>
-                <div className="mobile">
+                <div className={"mobile" + (toggleShow ? " show" : "")}>
                     <ul>
                         {
-                            pages.map((page, idx) => <li key={idx}><Link to={page.route}>{page.name}</Link></li>)
+                            pages.map((page, idx) => <li className={props.path === page.route ? 'current' : ''} key={idx}><Link onClick={() => setToggleShow(!toggleShow)} to={page.route}>{page.name}</Link></li>)
                         }
                     </ul>
                 </div>

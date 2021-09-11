@@ -22,3 +22,9 @@
 .Kiasan .wrapper div p {
   font-size: 18;
 }
+
+@media (max-width: 768px) {
+  .Kiasan .wrapper div p {
+    font-size: 12;
+  }
+}

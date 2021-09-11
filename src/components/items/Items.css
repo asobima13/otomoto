@@ -23,7 +23,6 @@
 
 .Items .motor .img img {
   height: 100%;
-  /* margin: 0 auto; */
 }
 
 .Items .motor .txt .title {
@@ -36,4 +35,10 @@
 
 .Items .motor .txt p {
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .Items .motor {
+    flex: 35%;
+  }
 }
